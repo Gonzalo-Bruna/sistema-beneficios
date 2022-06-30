@@ -11,4 +11,9 @@ export class BeneficioService {
   getBeneficios() {
     return beneficios; 
   }
+  getBeneficio(id:number){
+    return beneficios.find( beneficio=> {
+      return beneficio.id_beneficio == id;
+    })
+  }
 }
