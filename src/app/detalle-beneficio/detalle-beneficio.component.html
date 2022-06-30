@@ -1,1 +1,32 @@
-<h2>{{beneficio.id_beneficio}}</h2>
+<div class="container my-5">
+    <div class="row g-5 mx-auto">
+        <div class="col-12 col-lg-5">
+            <img src="{{beneficio.imagen}}" alt="beneficio">
+        </div>
+        <div class="col-12 col-lg-7">
+            <div class="d-flex flex-wrap justify-content-center align-items-center">
+                <h1><span class="badge bg-danger">{{beneficio.porcentaje_descuento}}% OFF</span></h1>
+                &nbsp;
+                &nbsp;  <!-- es un caracter de espacio -->
+                <h2 class="gradient-text">- {{beneficio.nombre}}</h2>
+            </div>
+            <hr>
+            <a class="gradient-text" href="https://www.google.com">Sitio Web del convenio</a>
+            <div class="mt-3">
+                <h4>¿Cómo acceder al beneficio?</h4>
+                
+                <div class="ms-5">
+                    <p>{{beneficio.descripcion}}</p>
+                </div>
+                <h4>Detalles del beneficio</h4>
+                <div class="ms-5 text-bold">
+                    <p class="mb-1">Tarjeta: {{beneficio.tarjeta}}</p>
+                    <p class="mb-1">Ubicación: {{beneficio.ubicacion}}</p>
+                </div>
+                
+            </div>
+            
+
+        </div>
+    </div>
+</div>
