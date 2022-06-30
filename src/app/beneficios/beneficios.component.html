@@ -2,30 +2,17 @@
 
 <div class="container-fluid">
     <div class="row row-cols-4 gap-3 justify-content-center">
-        <div *ngFor="let item of getBeneficios()" class="card col" style="width: 18rem;">
+        <div *ngFor="let item of getBeneficios()" class="card col" style="width: 18rem;" [routerLink]="['/','beneficio',item.id_beneficio]">
             <img src="{{item.imagen}}" class="card-img-top" alt="logo">
-            <div class="card-body">
-              <h5 class="text-center card-text">{{item.nombre}}</h5>
+            <div class="text-center card-body">
+              <h5 class="mb-3">{{item.nombre}}</h5>
+              <p class="mb-1">{{item.descripcion}}</p>
+              <p>{{item.tarjeta}}</p>
+              <h3><span class="badge bg-danger text-white">{{item.porcentaje_descuento}}% OFF</span></h3>
+              <!-- <h4>{{item.porcentaje_descuento}}% OFF</h4> -->
+              <p>{{item.ubicacion}}</p>
             </div>
         </div>
-        <!-- <div class="card col" style="width: 18rem;">
-            <img src="../../assets/images/bci-1.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-        </div>
-        <div class="card col" style="width: 18rem;">
-            <img src="../../assets/images/bci-1.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-        </div>
-        <div class="card col" style="width: 18rem;">
-            <img src="../../assets/images/bci-1.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-        </div> -->
     </div>
 </div>
 
