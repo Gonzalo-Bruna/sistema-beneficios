@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BeneficioService } from '../services/beneficio.service';
 
 @Component({
   selector: 'app-beneficios',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BeneficiosComponent implements OnInit {
 
-  constructor() { }
+  constructor(private beneficiosService: BeneficioService) { }
 
   ngOnInit(): void {
+  }
+
+  getBeneficios() {
+    return this.beneficiosService.getBeneficios();
   }
 
 }
