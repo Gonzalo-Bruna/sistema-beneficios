@@ -1,1 +1,17 @@
-<p>buscador-beneficios works!</p>
+<div class="mx-auto col-5 col-lg-5">
+
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">
+                ¡Encuentra tuuus de$cuentines aquí!
+            </h5>
+            <app-search-bar (filter)="getFilter($event)"></app-search-bar>
+            
+        </div>
+
+        <a *ngFor="let beneficio of beneficiosList | beneficiosPipe: this.beneficiosFilter" 
+            [routerLink]="['/','beneficio',beneficio.id_beneficio]">
+                {{beneficio.nombre}}
+        </a>
+    </div>
+</div>

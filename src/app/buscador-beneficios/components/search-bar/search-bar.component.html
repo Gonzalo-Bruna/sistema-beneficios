@@ -1,1 +1,11 @@
-<p>search-bar works!</p>
+<div class="input-group mb-3 text-left">
+    <select class="form-select" [(ngModel)]="filterModel.filter" (ngModelChange)="onInputChange()">
+        <option [value]="0">Filtro por beneficio</option>
+        <option [value]="1">Filtro por rubro</option>
+        <option [value]="2">Filtro por banco</option>
+        <option [value]="3">Filtro por tarjeta</option>
+        <option [value]="4">Filtro por ubicación</option>
+    </select>
+    <input type="text" class="form-control" list="beneficiosDataList" placeholder="Desssscuentiness....!" 
+    [(ngModel)]="filterModel.input" (ngModelChange)="onInputChange()">
+</div>
