@@ -5,16 +5,17 @@
                 ¡Encuentra tuuus de$cuentines aquí!
             </h4>
             <app-search-bar (filter)="getFilter($event)"></app-search-bar>
-            
         </div>
-
         <div class="">
-            <a *ngFor="let beneficio of beneficiosList | beneficiosPipe: this.beneficiosFilter" 
-                [routerLink]="['/','beneficio',beneficio.id_beneficio]"
-                class="list-group-item list-group-item-action"
-            >
-                {{beneficio.nombre}}
-            </a>
-          
+            <div class="results rounded">
+                <a *ngFor="let beneficio of beneficiosList | beneficiosPipe: this.beneficiosFilter" 
+                    [routerLink]="['/','beneficio',beneficio.id_beneficio]"
+                    class="list-group-item list-group-item-action"
+                >
+                    {{beneficio.nombre}}
+                </a>
+            </div>
+        </div>
+        
     </div>
 </div>
