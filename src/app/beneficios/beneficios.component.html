@@ -1,6 +1,6 @@
 <h2 class="my-5 text-center fs-1">Beneficios</h2>
 
-<div class="container-fluid">
+<div class="my-4 container-fluid">
     <div class="row row-cols-3 gap-3 justify-content-center">
         <div *ngFor="let item of getBeneficios()" class="card col" style="width: 18rem;" [routerLink]="['/','beneficio',item.id_beneficio]">
             <img src="{{item.imagen}}" class="card-img-top" alt="logo">
